@@ -7,7 +7,6 @@ on:
 
 jobs:
   documentation:
-    if: github.repository == 'aws-samples/djl-demo'
     runs-on: ubuntu-18.04
     steps:
       - name: Set up Python3
