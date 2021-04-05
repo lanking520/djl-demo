@@ -26,14 +26,14 @@ jobs:
           cd emr-distributed-inference/dataprocess && ./gradlew build && cd ../../
           cd emr-distributed-inference/image-classification-gpu && ./gradlew build && cd ../../
           cd lambda-model-serving && ./gradlew build && cd ..
-      - name: Compile Apaceh Camel
+      - name: Compile Apache Camel
         run: cd camel-djl && mvn package
       - name: Compile Apache Flink
         run: |
           cd apache-flink/sentence_embedding && ./gradlew build && cd ..
           cd sentiment-analysis && ./gradlew build
       - name: Compile Footwear Classification
-        run: cd footware_classificaiton && ./gradlew build
+        run: cd footwear_classificaiton && ./gradlew build
       - name: Compile graalvm
         run: cd graalvm && ./mvnw package
       - name: Compile Live object detection
